@@ -9,7 +9,7 @@ do
                 shift ;;
                 --list) file="$2" 
                 shift ;;
-                *) echo -e "Usage: dnschecker [-u example.com] [-r TXT] [--list example.txt]\n\t-u The option specifies the domain name of the remote host.\n\t-r The option specifies the record on the domain name for which information is to be retrieved.\n\t--list The option points to a file with a list of records that need to be checked." ;;
+                *) echo -e "Usage: dnsrc [-u example.com] [-r TXT] [--list example.txt]\n\t-u The option specifies the domain name of the remote host.\n\t-r The option specifies the record on the domain name for which information is to be retrieved.\n\t--list The option points to a file with a list of records that need to be checked." ;;
         esac
         shift
 done
@@ -29,5 +29,5 @@ elif [[ "$record" ]] && [[ ! "$file" ]] && [[ "$address" ]]
 then
         dig +nocmd +noquestion +noauthority +noadditional +nocomments +nostats +nomultiline +noshort @8.8.8.8 $address $record
 else
-        echo -e "Usage: dnschecker [-u example.com] [-r TXT] [--list example.txt]\n\t-u The option specifies the domain name of the remote host.\n\t-r The option specifies the record on the domain name for which information is to be retrieved.\n\t--list The option points to a file with a list of records that need to be checked."
+        echo -e "Usage: dnsrc [-u example.com] [-r TXT] [--list example.txt]\n\t-u The option specifies the domain name of the remote host.\n\t-r The option specifies the record on the domain name for which information is to be retrieved.\n\t--list The option points to a file with a list of records that need to be checked."
 fi
