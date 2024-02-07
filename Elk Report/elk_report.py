@@ -18,7 +18,7 @@ def DashboardReport():
     #driver.find_element("type", "submit").click()
     driver.find_element(By.CSS_SELECTOR, '[data-test-subj="loginSubmit"]').click()
     time.sleep(6)
-    driver.get(f"http://{domain}/app/dashboards#/view/987203d0-c011-11ee-9072-2b4e7ef329f0?_g=(filters:!())")
+    driver.get(f"http://{domain}/app/dashboards#/view/***")
     time.sleep(6)
     driver.find_element(By.CSS_SELECTOR, '[data-test-subj="dashboardFullScreenMode"]').click()
     driver.fullscreen_window()
