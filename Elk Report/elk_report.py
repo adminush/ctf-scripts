@@ -30,7 +30,7 @@ def DashboardReport():
 def TxtReport():
     requests.packages.urllib3.disable_warnings()
 
-    file = open("Список пользователей.txt", "w")
+    file = open("users.txt", "w")
 
     searchUrl = "https://***.***.***.***/******/_search?pretty" # elk api search
     # Запрос по выгрузке уникальных УЗ, которые подключались по VPN из-за границы в течении недели
@@ -115,7 +115,7 @@ def EmailShare():
     mailItem.Send()
 
 if __name__ == "__main__":
-    domain = "10.20.30.78:5601"
+    domain = "***.***.***.***"
     apiCreds = ["***", "***"] # elasticsearch api creds
     creds = ["***", "***"] # kibana creds
     DashboardReport()
